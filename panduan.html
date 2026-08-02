@@ -13,7 +13,7 @@
   <header class="site-header">
     <div>
       <h1>Panduan Penggunaan Dasbor</h1>
-      <p>Dasbor perbandingan ARIMA dan Prophet</p>
+      <p>Dasbor perbandingan peramalan suhu menggunakan ARIMA dan Prophet</p>
     </div>
 
     <a class="button" href="index.html">← Kembali ke Dasbor</a>
@@ -25,21 +25,37 @@
 
       <h3>1. Membaca ringkasan evaluasi</h3>
       <p>
-        Halaman ringkasan menampilkan jumlah wilayah, titik pengujian,
-        model unggul, serta rata-rata MAE, RMSE, dan MAPE.
+        Halaman ringkasan menampilkan jumlah kelurahan, jumlah titik pengujian,
+        jumlah kelurahan yang dimenangkan setiap model, jumlah prediksi terdekat,
+        serta rata-rata MAE, RMSE, dan MAPE.
       </p>
 
       <h3>2. Memilih metrik evaluasi</h3>
       <p>
-        Gunakan kontrol Pilih Metrik Evaluasi untuk mengganti tampilan
-        grafik antara MAE, RMSE, dan MAPE.
+        Gunakan kontrol <strong>Pilih Metrik Evaluasi</strong> untuk mengganti
+        grafik perbandingan antarkelurahan berdasarkan MAE, RMSE, atau MAPE.
+        Pemilihan metrik hanya mengubah grafik evaluasi.
       </p>
 
-      <h3>3. Melihat detail prediksi</h3>
+      <h3>3. Membuka halaman detail prediksi</h3>
       <p>
-        Klik tombol Lihat Detail Prediksi, kemudian pilih kelurahan untuk
-        melihat data uji, prediksi ARIMA, prediksi Prophet, dan kesalahan
-        absolut pada setiap waktu pengujian.
+        Klik tombol <strong>Lihat Detail Prediksi</strong> pada bagian bawah
+        halaman ringkasan untuk membuka halaman detail prediksi suhu.
+      </p>
+
+      <h3>4. Memilih kelurahan</h3>
+      <p>
+        Gunakan kontrol <strong>Pilih Kelurahan</strong> untuk menampilkan hasil
+        prediksi pada satu kelurahan. Grafik dan tabel akan berubah mengikuti
+        kelurahan yang dipilih.
+      </p>
+
+      <h3>5. Membaca hasil prediksi</h3>
+      <p>
+        Grafik menampilkan perbandingan data uji, prediksi ARIMA, dan prediksi
+        Prophet pada empat waktu pengujian. Tabel di bawah grafik menampilkan
+        nilai prediksi, kesalahan absolut, dan model dengan prediksi terdekat
+        pada setiap waktu pengujian.
       </p>
     </section>
   </main>
