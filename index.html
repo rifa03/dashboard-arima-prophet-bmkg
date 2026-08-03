@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="atas">
   <header class="site-header">
     <div>
       <h1>Dasbor Perbandingan ARIMA dan Prophet</h1>
@@ -21,17 +21,23 @@
 
   <main class="report-main">
     <section class="dashboard-container dashboard-container--report">
-    <div class="dashboard-embed">
-      <iframe
-        src="https://datastudio.google.com/embed/reporting/8a6c19b0-c4f4-4505-80cb-12fc2ea0e774/page/xDH5F"
-        title="Dasbor Perbandingan ARIMA dan Prophet"
-        loading="lazy"
-        frameborder="0"
-        allowfullscreen
-        sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
-      </iframe>
-    </div>
-  </section>
-</main>
+      <div class="dashboard-embed">
+        <iframe
+          src="https://datastudio.google.com/embed/reporting/8a6c19b0-c4f4-4505-80cb-12fc2ea0e774/page/xDH5F"
+          title="Ringkasan evaluasi peramalan suhu"
+          loading="lazy"
+          frameborder="0"
+          allowfullscreen
+          sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+        </iframe>
+      </div>
+    </section>
+
+    <nav class="report-navigation" aria-label="Navigasi dasbor">
+      <a class="button" href="detail.html#atas">
+        Lihat Detail Prediksi →
+      </a>
+    </nav>
+  </main>
 </body>
 </html>
