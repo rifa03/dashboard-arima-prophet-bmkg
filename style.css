@@ -6,6 +6,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -49,7 +50,7 @@ body {
   background: #0d47a1;
 }
 
-/* Dipakai oleh halaman panduan */
+/* Pengaturan umum untuk halaman panduan */
 main {
   width: 100%;
   padding: 32px 5%;
@@ -67,6 +68,7 @@ main {
 /* Khusus halaman utama yang memuat Looker Studio */
 .report-main {
   width: 100%;
+  margin: 0;
   padding: 0;
 }
 
@@ -84,16 +86,25 @@ main {
   border-radius: 0;
 }
 
+/* Menjaga rasio laporan berdasarkan ukuran embed 600 × 791 */
 .dashboard-embed {
+  position: relative;
   width: 100%;
-  height: calc(100vh - 133px);
-  min-height: 850px;
+  height: auto;
+  min-height: 0;
+
+  aspect-ratio: 600 / 791;
+  overflow: hidden;
 }
 
 .dashboard-embed iframe {
+  position: absolute;
+  inset: 0;
+
   display: block;
   width: 100%;
   height: 100%;
+
   border: 0;
 }
 
@@ -102,14 +113,23 @@ main {
   .site-header {
     align-items: flex-start;
     flex-direction: column;
+    padding: 20px;
   }
 
   .site-header h1 {
     font-size: 28px;
   }
 
-  .dashboard-embed {
-    height: calc(100vh - 190px);
-    min-height: 700px;
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .report-main {
+    padding: 0;
   }
 }
