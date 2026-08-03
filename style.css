@@ -1,62 +1,110 @@
+/* =========================================================
+   PENGATURAN DASAR
+   ========================================================= */
+
 * {
   box-sizing: border-box;
 }
 
-html,
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
 
-body {
   font-family: Arial, sans-serif;
   color: #202124;
   background: #e9eef4;
 }
 
-/* Header situs */
+
+/* =========================================================
+   HEADER SITUS
+   Dipakai pada index.html, detail.html, dan panduan.html
+   ========================================================= */
+
 .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
 
+  width: 100%;
   padding: 24px 5%;
+
   background: #86bde6;
   border-bottom: 1px solid #aebecb;
 }
 
 .site-header h1 {
   margin: 0 0 8px;
+
+  font-size: 34px;
+  line-height: 1.2;
 }
 
 .site-header p {
   margin: 0;
+
+  font-size: 18px;
+  line-height: 1.4;
 }
 
-/* Tombol panduan dan kembali */
+
+/* =========================================================
+   TOMBOL
+   ========================================================= */
+
 .button {
   display: inline-block;
+  flex-shrink: 0;
+
   padding: 12px 18px;
 
   color: #ffffff;
+  font-size: 17px;
+  line-height: 1.3;
+  text-align: center;
   text-decoration: none;
+  white-space: nowrap;
+
   background: #1565c0;
+  border: 0;
   border-radius: 8px;
+
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .button:hover {
   background: #0d47a1;
 }
 
-/* Pengaturan umum untuk halaman panduan */
+.button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   PENGATURAN UMUM HALAMAN
+   Utamanya dipakai oleh panduan.html
+   ========================================================= */
+
 main {
   width: 100%;
   padding: 32px 5%;
 }
 
 .dashboard-container {
+  width: 100%;
   min-height: 700px;
   padding: 24px;
 
@@ -65,7 +113,12 @@ main {
   border-radius: 12px;
 }
 
-/* Khusus halaman utama yang memuat Looker Studio */
+
+/* =========================================================
+   HALAMAN REPORT LOOKER STUDIO
+   Dipakai oleh index.html dan detail.html
+   ========================================================= */
+
 .report-main {
   width: 100%;
   margin: 0;
@@ -81,20 +134,29 @@ main {
   padding: 0;
 
   overflow: hidden;
+
   background: #ffffff;
   border: 0;
   border-radius: 0;
 }
 
-/* Menjaga rasio laporan berdasarkan ukuran embed 600 × 791 */
+
+/* =========================================================
+   AREA IFRAME LOOKER STUDIO
+   Rasio mengikuti kode sematan bawaan: 600 × 791
+   ========================================================= */
+
 .dashboard-embed {
   position: relative;
+
   width: 100%;
   height: auto;
   min-height: 0;
 
   aspect-ratio: 600 / 791;
+
   overflow: hidden;
+  background: #ffffff;
 }
 
 .dashboard-embed iframe {
@@ -102,17 +164,68 @@ main {
   inset: 0;
 
   display: block;
+
   width: 100%;
   height: 100%;
 
   border: 0;
 }
 
-/* Penyesuaian layar kecil */
+
+/* =========================================================
+   NAVIGASI REPORT DI LUAR IFRAME
+   Contoh: tombol "Lihat Detail Prediksi"
+   ========================================================= */
+
+.report-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+  margin: 0;
+  padding: 20px 5% 32px;
+
+  background: #e9eef4;
+}
+
+
+/* =========================================================
+   ISI HALAMAN PANDUAN
+   ========================================================= */
+
+.dashboard-container h2 {
+  margin-top: 0;
+  margin-bottom: 28px;
+
+  font-size: 28px;
+}
+
+.dashboard-container h3 {
+  margin-top: 28px;
+  margin-bottom: 8px;
+
+  font-size: 21px;
+}
+
+.dashboard-container p {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PENYESUAIAN UNTUK TABLET DAN TELEPON
+   ========================================================= */
+
 @media (max-width: 768px) {
   .site-header {
     align-items: flex-start;
     flex-direction: column;
+
     padding: 20px;
   }
 
@@ -120,9 +233,12 @@ main {
     font-size: 28px;
   }
 
-  .button {
+  .site-header p {
+    font-size: 16px;
+  }
+
+  .site-header .button {
     width: 100%;
-    text-align: center;
   }
 
   main {
@@ -131,5 +247,49 @@ main {
 
   .report-main {
     padding: 0;
+  }
+
+  .dashboard-container {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .report-navigation {
+    padding: 16px 20px 24px;
+  }
+
+  .report-navigation .button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   PENYESUAIAN UNTUK TELEPON KECIL
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .site-header h1 {
+    font-size: 24px;
+  }
+
+  .site-header p {
+    font-size: 15px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+
+  .dashboard-container h2 {
+    font-size: 24px;
+  }
+
+  .dashboard-container h3 {
+    font-size: 19px;
+  }
+
+  .dashboard-container p {
+    font-size: 16px;
   }
 }
