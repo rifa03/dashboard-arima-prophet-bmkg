@@ -153,10 +153,8 @@ main {
   position: relative;
 
   width: 100%;
-  height: auto;
-  min-height: 0;
-
-  aspect-ratio: 600 / 791;
+  height: 100vh;
+  min-height: 900px;
 
   overflow: hidden;
   background: #ffffff;
@@ -266,7 +264,10 @@ main {
     font-size: 15px;
   }
 }
-
+.dashboard-embed {
+  height: 1600px;
+  min-height: 1600px;
+}
 
 /* =========================================================
    PENYESUAIAN UNTUK TELEPON KECIL
@@ -304,4 +305,13 @@ main {
     padding: 10px 14px;
     font-size: 14px;
   }
+}
+
+@media (max-width: 480px) {
+
+  .dashboard-embed {
+    height: 1700px;
+    min-height: 1700px;
+  }
+
 }
