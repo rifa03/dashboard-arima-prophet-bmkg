@@ -146,7 +146,7 @@ main {
 
 /* =========================================================
    AREA IFRAME LOOKER STUDIO
-   Rasio mengikuti kode sematan 600 × 791
+   DESKTOP
    ========================================================= */
 
 .dashboard-embed {
@@ -175,7 +175,6 @@ main {
 
 /* =========================================================
    TOMBOL DETAIL DI ATAS AREA DASBOR
-   Tombol ini menggantikan tombol internal Looker Studio
    ========================================================= */
 
 .report-detail-button {
@@ -216,10 +215,11 @@ main {
 
 
 /* =========================================================
-   PENYESUAIAN UNTUK TABLET DAN TELEPON
+   TABLET DAN TELEPON
    ========================================================= */
 
 @media (max-width: 768px) {
+
   .site-header {
     align-items: flex-start;
     flex-direction: column;
@@ -256,6 +256,17 @@ main {
     padding: 0;
   }
 
+  /*
+     Jangan dibuat 1600–1700 px.
+     Tinggi iframe yang terlalu besar dapat membuat
+     popup/dropdown Looker Studio ditempatkan terlalu jauh
+     dari posisi kontrol yang sedang dilihat pengguna.
+  */
+  .dashboard-embed {
+    height: 1000px;
+    min-height: 1000px;
+  }
+
   .report-detail-button {
     right: 20px;
     bottom: 30px;
@@ -264,16 +275,14 @@ main {
     font-size: 15px;
   }
 }
-.dashboard-embed {
-  height: 1600px;
-  min-height: 1600px;
-}
+
 
 /* =========================================================
-   PENYESUAIAN UNTUK TELEPON KECIL
+   TELEPON KECIL
    ========================================================= */
 
 @media (max-width: 480px) {
+
   .site-header h1 {
     font-size: 24px;
   }
@@ -298,6 +307,15 @@ main {
     font-size: 16px;
   }
 
+  /*
+     Ukuran lebih pendek supaya popup kontrol
+     Looker Studio muncul lebih dekat dengan viewport.
+  */
+  .dashboard-embed {
+    height: 900px;
+    min-height: 900px;
+  }
+
   .report-detail-button {
     right: 12px;
     bottom: 22px;
@@ -305,13 +323,4 @@ main {
     padding: 10px 14px;
     font-size: 14px;
   }
-}
-
-@media (max-width: 480px) {
-
-  .dashboard-embed {
-    height: 1700px;
-    min-height: 1700px;
-  }
-
 }
