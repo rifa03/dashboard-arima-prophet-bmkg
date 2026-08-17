@@ -22,40 +22,55 @@
   <main>
     <section class="dashboard-container">
       <h2>Cara Menggunakan Dasbor</h2>
-
+    
       <h3>1. Membaca ringkasan evaluasi</h3>
       <p>
         Halaman ringkasan menampilkan jumlah kelurahan, jumlah titik pengujian,
         jumlah kelurahan yang dimenangkan setiap model, jumlah prediksi terdekat,
         serta rata-rata MAE, RMSE, dan MAPE.
       </p>
-
+    
       <h3>2. Memilih metrik evaluasi</h3>
       <p>
         Gunakan kontrol <strong>Pilih Metrik Evaluasi</strong> untuk mengganti
         grafik perbandingan antarkelurahan berdasarkan MAE, RMSE, atau MAPE.
         Pemilihan metrik hanya mengubah grafik evaluasi.
       </p>
-
+    
       <h3>3. Membuka halaman detail prediksi</h3>
       <p>
         Klik tombol <strong>Lihat Detail Prediksi</strong> pada bagian bawah
         halaman ringkasan untuk membuka halaman detail prediksi suhu.
       </p>
-
+    
       <h3>4. Memilih kelurahan</h3>
       <p>
         Gunakan kontrol <strong>Pilih Kelurahan</strong> untuk menampilkan hasil
-        prediksi pada satu kelurahan. Grafik dan tabel akan berubah mengikuti
-        kelurahan yang dipilih.
+        prediksi pada satu kelurahan. Informasi teknis model ARIMA, grafik, dan
+        tabel rincian akan menyesuaikan dengan kelurahan yang dipilih.
       </p>
-
-      <h3>5. Membaca hasil prediksi</h3>
+    
+      <h3>5. Melihat informasi teknis model ARIMA</h3>
+      <p>
+        Bagian <strong>Informasi Teknis Model ARIMA</strong> menampilkan model
+        ARIMA yang digunakan pada kelurahan terpilih, nilai p-value hasil uji ADF,
+        dan nilai AIC. Nilai p-value ADF kurang dari 0,05 menunjukkan bahwa data
+        yang digunakan untuk pembentukan model telah memenuhi kondisi stasioneritas.
+      </p>
+    
+      <h3>6. Memilih waktu pengujian</h3>
+      <p>
+        Gunakan kontrol <strong>Pilih Waktu Pengujian</strong> untuk menelusuri
+        hasil pada salah satu waktu pengujian. Pemilihan waktu digunakan untuk
+        menampilkan rincian prediksi dan kesalahan pada waktu yang dipilih.
+      </p>
+    
+      <h3>7. Membaca hasil prediksi</h3>
       <p>
         Grafik menampilkan perbandingan data uji, prediksi ARIMA, dan prediksi
-        Prophet pada empat waktu pengujian. Tabel di bawah grafik menampilkan
-        nilai prediksi, kesalahan absolut, dan model dengan prediksi terdekat
-        pada setiap waktu pengujian.
+        Prophet pada empat waktu pengujian. Tabel rincian menampilkan waktu
+        pengujian, nilai data uji, hasil prediksi kedua metode, kesalahan absolut,
+        serta metode dengan prediksi terdekat.
       </p>
     </section>
   </main>
