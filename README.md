@@ -44,3 +44,4 @@ The ARIMA model achieved the best performance on:
 ## Dashboard Preview
 
 ![Dashboard Preview](images/Dasbor_0001.jpg)
+![Dashboard Preview2](images/Dasbor_0002.jpg)
