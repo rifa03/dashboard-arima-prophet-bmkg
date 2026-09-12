@@ -43,4 +43,4 @@ The ARIMA model achieved the best performance on:
 
 ## Dashboard Preview
 
-#![Dashboard Preview](images/dashboard.png)
+![Dashboard Preview]([images/dashboard.png](https://github.com/rifa03/dashboard-arima-prophet-bmkg/blob/5c8833a5f60bdf7f4940b49ad3d7fca2fbfd6458/images/1.%20Dasbor_Perbandingan_ARIMA_dan_Prophet_pada_Prakiraan_Suhu_BMKG_Kabupaten_Tangerang_page-0001.jpg))
